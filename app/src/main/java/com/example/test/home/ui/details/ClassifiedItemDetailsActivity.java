@@ -44,7 +44,7 @@ public class ClassifiedItemDetailsActivity extends AppCompatActivity {
     private void initData(ClassifiedItem item) {
         tvItemName.setText(item.getName());
         tvItemPrice.setText(item.getPrice());
-        Picasso.with(this).load(item.getImagesList().get(0));
+        Picasso.with(this).load(item.getImagesList().get(0)).fit().placeholder(R.color.shimmerBackground).into(ivItemImage);
         tvTime.setText(ExtensionsKt.getFormattedDate(item));
     }
 }

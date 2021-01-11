@@ -30,7 +30,7 @@ class ClassifiedItemsAdapter (val itemList : List<ClassifiedItem>) : RecyclerVie
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = itemList[position]
         val view = holder.itemView
-        Picasso.with(view.context).load(item.imagesList[0]+".jpg")
+        Picasso.with(view.context).load(item.imagesList[0]).fit().placeholder(R.color.shimmerBackground).into(view.ivItemImage)
         view.tvItemName.text = item.name
         view.tvTime.text = item.getFormattedDate()
         view.tvItemPrice.text = item.price

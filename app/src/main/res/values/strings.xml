@@ -6,4 +6,5 @@
     <string name="something_went_wrong">Something went wrong..</string>
     <string name="no_item_message">An alien is probably blocking your signal..</string>
     <string name="retry">Retry</string>
+    <string name="item_detail">Detail</string>
 </resources>
