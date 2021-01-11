@@ -5,6 +5,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <TextView
+        style="@style/LargeTextView"
+        android:id="@+id/tvHeader"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/unit_2x"
+        android:layout_marginStart="@dimen/unit_2x"
+        android:layout_marginTop="@dimen/unit_2x"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:text="@string/item_detail"
+        android:textSize="@dimen/text_size_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Item Detail" />
+
     <ImageView
         android:id="@+id/ivItemImage"
         android:layout_width="match_parent"
@@ -15,7 +31,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
 
     <TextView
         style="@style/LargeTextView"
@@ -45,7 +61,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="20 AED" />
 
-
     <TextView
         android:id="@+id/tvTime"
         style="@style/MediumTextView"
@@ -58,5 +73,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvItemPrice"
         tools:text="12:00 Pm Satruday" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@
 ext.ktx_android = "1.3.0"
 
 // Kotlin coroutines
-ext.ktx_coroutines = "1.3.4"
+ext.ktx_coroutines = "1.4.2"
 
 // UI - AndroidX
 ext.androidx_cardview="1.0.0"
@@ -63,7 +63,10 @@ ext.picasso = "2.5.2"
 ext.lottie_animations= "2.7.0"
 
 // JUnit
-ext.test_junit = "4.12"
+ext.test_junit = "4.13.1"
+
+//MockK
+ext.mockk_version = "1.10.4"
 
 // Android JUnit
 ext.android_test_junit = "1.1.1"

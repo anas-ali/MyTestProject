@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="wrap_content"
@@ -17,7 +16,6 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/no_item_found" />
-
 
     <TextView
         android:id="@+id/tvHeading"
@@ -34,22 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animationView" />
-
-
-    <TextView
-        android:id="@+id/tvMessage"
-        style="@style/MediumTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/unit_2x"
-        android:layout_marginTop="@dimen/unit_1x"
-        android:layout_marginEnd="@dimen/unit_2x"
-        android:gravity="center"
-        android:lines="1"
-        android:text="@string/no_item_message"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
 
     <Button
         android:id="@+id/btnRetry"

@@ -17,4 +17,3 @@ Use MVVM with Retrofit and Coroutines with Hilt as DI. Navigation through Arch C
     - Lottie
     - Picasso
     - Dark Theme Support (Based on system settings)
-- Five minutes default refresh limit but it can be force updated using pull to refresh

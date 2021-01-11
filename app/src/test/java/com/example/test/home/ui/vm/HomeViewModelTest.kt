@@ -44,10 +44,17 @@ class HomeViewModelTest {
     @Test
     fun `fetches items list with success`() {
         coEvery { mockedMainRepo.getItems() } returns Result.Success(getSampleResponse())
-        every { subject.getData() } returns 100
         subject.fetchData()
 
-        assertEquals(100, subject.getData())
+        coEvery { mockedMainRepo.getItems() }
+    }
+
+    @Test
+    fun `fetches items list with error`() {
+        coEvery { mockedMainRepo.getItems() } returns Result.Error(400, null)
+        subject.fetchData()
+
+        coEvery { mockedMainRepo.getItems() }
     }
 
     private fun getSampleResponse() = ClassifiedApiResponse(
