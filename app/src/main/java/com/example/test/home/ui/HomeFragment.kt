@@ -1,5 +1,6 @@
 package com.example.test.home.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.lifecycle.observe
 import com.example.test.data.models.ClassifiedItem
 import com.example.test.databinding.FragmentMainBinding
 import com.example.test.home.adapters.ClassifiedItemsAdapter
+import com.example.test.home.ui.details.ClassifiedItemDetailsActivity
 import com.example.test.home.vm.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_main.*
@@ -23,6 +25,8 @@ class HomeFragment : Fragment() {
     private val viewModel: HomeViewModel by viewModels()
 
     private lateinit var binding: FragmentMainBinding
+
+    private lateinit var adapter: ClassifiedItemsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,8 +53,9 @@ class HomeFragment : Fragment() {
     private fun setupRecyclerView(list : List<ClassifiedItem>) = with(binding) {
         rvRepos.visibility = View.VISIBLE
         swiperefresh.isRefreshing = false
-        val adapter = ClassifiedItemsAdapter(list)
+        adapter = ClassifiedItemsAdapter(list)
         rvRepos.adapter = adapter
+        setupAdapterItemClick()
     }
 
     private fun renderSchimmerLayout(isShown: Boolean) {
@@ -69,6 +74,13 @@ class HomeFragment : Fragment() {
            binding.noItemFound.isVisible = false
            viewModel.fetchData()
        }
+    }
 
+    private fun setupAdapterItemClick() {
+        adapter.doOnItemClicked {
+            val intent = Intent(context, ClassifiedItemDetailsActivity::class.java)
+            intent.putExtra("classifiedItem",it)
+            context?.startActivity(intent)
+        }
     }
 }

@@ -22,6 +22,7 @@
     <dimen name="unit_17x">136dp</dimen>
     <dimen name="unit_18x">144dp</dimen>
     <dimen name="unit_20x">160dp</dimen>
+    <dimen name="unit_30x">240dp</dimen>
 
 
     <!--text sizes-->

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivItemImage"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/unit_4x"
+        android:layout_marginEnd="@dimen/unit_4x"
+        android:layout_height="@dimen/unit_30x"
+        android:layout_marginTop="@dimen/unit_2x"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/LargeTextView"
+        android:id="@+id/tvItemName"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/unit_2x"
+        android:layout_marginStart="@dimen/unit_2x"
+        android:layout_marginTop="@dimen/unit_2x"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivItemImage"
+        tools:text="trungK18" />
+
+    <TextView
+        style="@style/LargeTextView"
+        android:id="@+id/tvItemPrice"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/unit_2x"
+        android:layout_marginStart="@dimen/unit_2x"
+        android:layout_marginTop="@dimen/unit_1x"
+        android:layout_width="wrap_content"
+        android:lines="1"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="20 AED" />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/MediumTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/unit_2x"
+        android:layout_marginTop="@dimen/unit_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemPrice"
+        tools:text="12:00 Pm Satruday" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,9 +22,4 @@
         <item name="android:textColor">@color/textColor</item>
         <item name="android:textSize">@dimen/text_size_12sp</item>
     </style>
-
-
-
-
-
 </resources>

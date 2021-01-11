@@ -1,8 +1,12 @@
 package com.example.test.data.models
 
+
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 
+@Parcelize
 data class ClassifiedItem (
     @Json(name = "id")
     val id: Int?,
@@ -14,6 +18,6 @@ data class ClassifiedItem (
     val name: String,
     @Json(name = "image_urls")
     val imagesList: List<String>
-)
+) : Parcelable
 
 data class ClassifiedApiResponse (val results: List<ClassifiedItem>) : Serializable

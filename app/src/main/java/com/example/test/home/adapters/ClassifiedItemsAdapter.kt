@@ -12,9 +12,15 @@ import kotlinx.android.synthetic.main.item_list.view.*
 
 class ClassifiedItemsAdapter (val itemList : List<ClassifiedItem>) : RecyclerView.Adapter<ClassifiedItemsAdapter.ViewHolder>()  {
 
+    private var onItemClickedAction: ((ClassifiedItem) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflatedView = LayoutInflater.from(parent.context).inflate(R.layout.item_list,parent,false)
         return ViewHolder(inflatedView)
+    }
+
+    fun doOnItemClicked(action: (ClassifiedItem) -> Unit) {
+        onItemClickedAction = action
     }
 
     override fun getItemCount(): Int {
@@ -28,6 +34,7 @@ class ClassifiedItemsAdapter (val itemList : List<ClassifiedItem>) : RecyclerVie
         view.tvItemName.text = item.name
         view.tvTime.text = item.getFormattedDate()
         view.tvItemPrice.text = item.price
+        view.setOnClickListener { onItemClickedAction?.invoke(item) }
     }
 
     class ViewHolder (v: View) : RecyclerView.ViewHolder(v)
