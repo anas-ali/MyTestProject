@@ -1,0 +1,57 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvUserName"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRepoName"
+        android:layout_width="@dimen/unit_32dp"
+        android:layout_height="@dimen/unit_32dp"
+        android:src="@color/shimmerBackground"
+        android:layout_marginStart="@dimen/unit_2x" />
+
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/unit_10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:lines="1"
+        android:layout_marginEnd="@dimen/unit_2x"
+        android:textSize="@dimen/text_size_12sp"
+        android:text="@string/app_name"
+        android:textColor="@color/shimmerBackground"
+        android:layout_marginStart="@dimen/unit_2x"
+        android:background="@drawable/schimmer_bg"
+        android:layout_marginTop="@dimen/unit_2x"
+        app:layout_constraintStart_toEndOf="@+id/ivUserImage"/>
+
+
+    <TextView
+        android:id="@+id/tvRepoName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/unit_10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        android:lines="1"
+        android:textSize="@dimen/text_size_14sp"
+        android:background="@drawable/schimmer_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/unit_2x"
+        android:layout_marginStart="@dimen/unit_2x"
+        android:layout_marginTop="@dimen/unit_1x"
+        app:layout_constraintStart_toEndOf="@+id/ivUserImage"/>
+
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/unit_2x"
+        android:layout_height="1dp"
+        android:background="@color/shimmerBackground"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#fff</color>
+    <color name="shimmerBackground">#D0D0D0</color>
+    <color name="textColor">#000</color>
+    <color name="white">#fff</color>
+    <color name="lightGreen">#9fcca2</color>
+</resources>

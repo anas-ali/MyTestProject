@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--standard material units, add further tags as per multiple of 8dp units-->
+    <dimen name="unit_0.5x">4dp</dimen>
+    <dimen name="unit_1x">8dp</dimen>
+    <dimen name="unit_1.5x">12dp</dimen>
+    <dimen name="unit_2x">16dp</dimen>
+    <dimen name="unit_2.5x">20dp</dimen>
+    <dimen name="unit_3x">24dp</dimen>
+    <dimen name="unit_4x">32dp</dimen>
+    <dimen name="unit_5x">40dp</dimen>
+    <dimen name="unit_6x">48dp</dimen>
+    <dimen name="unit_7x">56dp</dimen>
+    <dimen name="unit_8x">64dp</dimen>
+    <dimen name="unit_9x">72dp</dimen>
+    <dimen name="unit_10x">80dp</dimen>
+    <dimen name="unit_11x">88dp</dimen>
+    <dimen name="unit_12x">96dp</dimen>
+    <dimen name="unit_13x">104dp</dimen>
+    <dimen name="unit_14x">112dp</dimen>
+    <dimen name="unit_15x">120dp</dimen>
+    <dimen name="unit_17x">136dp</dimen>
+    <dimen name="unit_18x">144dp</dimen>
+    <dimen name="unit_20x">160dp</dimen>
+
+
+    <!--text sizes-->
+    <dimen name="text_size_10sp">10sp</dimen>
+    <dimen name="text_size_6sp">6sp</dimen>
+    <dimen name="text_size_8sp">8sp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_22sp">22sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+    <dimen name="text_size_26sp">26sp</dimen>
+    <dimen name="text_size_28sp">28sp</dimen>
+    <dimen name="text_size_32sp">32sp</dimen>
+
+    <!--Absolute dp units-->
+    <dimen name="unit_0dp">0dp</dimen>
+    <dimen name="unit_1dp">1dp</dimen>
+    <dimen name="unit_2dp">2dp</dimen>
+    <dimen name="unit_4dp">4dp</dimen>
+    <dimen name="unit_6dp">6dp</dimen>
+    <dimen name="unit_10dp">10dp</dimen>
+    <dimen name="unit_12dp">12dp</dimen>
+    <dimen name="unit_14dp">14dp</dimen>
+    <dimen name="unit_18dp">18dp</dimen>
+    <dimen name="unit_20dp">20dp</dimen>
+    <dimen name="unit_22dp">22dp</dimen>
+    <dimen name="unit_24dp">24dp</dimen>
+    <dimen name="unit_28dp">28dp</dimen>
+    <dimen name="unit_30dp">30dp</dimen>
+    <dimen name="unit_32dp">32dp</dimen>
+    <dimen name="unit_36dp">36dp</dimen>
+    <dimen name="unit_40dp">40dp</dimen>
+    <dimen name="unit_44dp">44dp</dimen>
+    <dimen name="unit_68dp">68dp</dimen>
+    <dimen name="unit_130dp">130dp</dimen>
+    <dimen name="unit_100dp">100dp</dimen>
+    <dimen name="unit_140dp">140dp</dimen>
+    <dimen name="unit_160dp">160dp</dimen>
+    <dimen name="unit_180dp">180dp</dimen>
+    <dimen name="unit_200dp">200dp</dimen>
+    <dimen name="unit_260dp">260dp</dimen>
+
+    <!--View specific dimens-->
+    <dimen name="unit_5dp">5dp</dimen>
+
+
+
+
+
+
+</resources>
