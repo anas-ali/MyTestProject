@@ -17,7 +17,6 @@
             android:layout_width="@dimen/unit_15x"
             android:layout_height="@dimen/unit_15x"
             android:scaleType="centerCrop"
-            android:src="@drawable/sample_image"
             app:layout_constraintStart_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
