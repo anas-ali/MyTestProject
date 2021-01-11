@@ -1,127 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginBottom="@dimen/unit_2x">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/unit_0.5x"
+    android:layout_marginBottom="@dimen/unit_2x"
+    app:cardElevation="@dimen/unit_0.5x">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ivUserImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvUserName"
-        app:layout_constraintBottom_toBottomOf="@+id/tvRepoName"
-        android:layout_width="@dimen/unit_40dp"
-        android:layout_height="@dimen/unit_40dp"
-        android:src="@color/shimmerBackground"
-        android:layout_marginStart="@dimen/unit_2x"
-        app:civ_border_width="0dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-
-    <TextView
-        android:id="@+id/tvUserName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:maxLines="1"
-        tools:text="trungK18"
-        android:layout_marginEnd="@dimen/unit_2x"
-        style="@style/MediumTextView"
-        android:layout_marginStart="@dimen/unit_2x"
-        android:layout_marginTop="@dimen/unit_2x"
-        app:layout_constraintStart_toEndOf="@+id/ivUserImage"/>
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="@dimen/unit_15x"
+            android:layout_height="@dimen/unit_15x"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_image"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <TextView
-        android:id="@+id/tvRepoName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
-        tools:text="Name"
-        android:lines="1"
-        style="@style/LargeTextView"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/unit_2x"
-        android:layout_marginStart="@dimen/unit_2x"
-        android:layout_marginTop="@dimen/unit_1x"
-        app:layout_constraintStart_toEndOf="@+id/ivUserImage"/>
+        <TextView
+            android:id="@+id/tvItemPrice"
+            style="@style/LargeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/unit_2x"
+            android:layout_marginTop="@dimen/unit_1x"
+            android:layout_marginEnd="@dimen/unit_2x"
+            android:lines="1"
+            app:layout_constraintStart_toEndOf="@+id/ivItemImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemName"
+            tools:text="20 AED" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            style="@style/LargeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/unit_2x"
+            android:layout_marginTop="@dimen/unit_2x"
+            android:layout_marginEnd="@dimen/unit_2x"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@+id/ivItemImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="trungK18" />
 
 
-    <TextView
-        android:id="@+id/tvRepoDetails"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="A terminal-based sdfsdfds presentation tool with colors and effects."
-        android:lines="2"
-        android:layout_marginEnd="@dimen/unit_2x"
-        style="@style/MediumTextView"
-        android:layout_marginStart="@dimen/unit_2x"
-        android:layout_marginTop="@dimen/unit_1x"
-        app:layout_constraintStart_toEndOf="@+id/ivUserImage"/>
+        <TextView
+            android:id="@+id/tvTime"
+            style="@style/MediumTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/unit_2x"
+            android:layout_marginTop="@dimen/unit_1x"
+            android:layout_marginEnd="@dimen/unit_2x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivItemImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemPrice"
+            tools:text="12:00 Pm Satruday" />
 
-    <View
-        android:id="@+id/viewDot"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginStart="@dimen/unit_2x"
-        android:layout_marginTop="@dimen/unit_2.5x"
-        android:background="@drawable/round_shape_blue"
-        app:layout_constraintStart_toEndOf="@+id/ivUserImage"
-        app:layout_constraintTop_toBottomOf="@+id/tvRepoDetails" />
-
-    <TextView
-        android:id="@+id/tvLanguage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvRepoDetails"
-        tools:text="Python."
-        style="@style/SmallTextView"
-        android:lines="1"
-        android:maxLength="50"
-        android:layout_marginEnd="@dimen/unit_2x"
-        android:textSize="@dimen/text_size_12sp"
-        android:layout_marginStart="@dimen/unit_0.5x"
-        android:layout_marginTop="@dimen/unit_2x"
-        app:layout_constraintStart_toEndOf="@+id/viewDot"/>
-
-
-
-    <ImageView
-        android:id="@+id/ivStar"
-        android:layout_width="@dimen/unit_2x"
-        android:layout_height="@dimen/unit_2x"
-        android:src="@drawable/ic_start"
-        app:layout_constraintTop_toBottomOf="@+id/tvRepoDetails"
-        android:layout_marginStart="@dimen/unit_0.5x"
-        android:layout_marginTop="@dimen/unit_2x"
-        app:layout_constraintStart_toEndOf="@+id/tvLanguage"/>
-
-    <TextView
-        android:id="@+id/tvRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvRepoDetails"
-        tools:text="54"
-        android:lines="1"
-        android:maxLength="50"
-        android:layout_marginEnd="@dimen/unit_2x"
-        style="@style/SmallTextView"
-        android:layout_marginStart="@dimen/unit_0.5x"
-        android:layout_marginTop="@dimen/unit_2x"
-        app:layout_constraintStart_toEndOf="@+id/ivStar"/>
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/moreContentGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:constraint_referenced_ids="ivStar,tvRating, tvLanguage,viewDot,tvRepoDetails"/>
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
